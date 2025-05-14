@@ -1,5 +1,6 @@
 # SERIAL-IN-SERIAL-OUT-SHIFTREGISTER
-
+# NAME : KABIRA A
+# REGISTER NO : 212224040146
 **AIM:**
 
 To implement  SISO Shift Register using verilog and validating their functionality using their functional tables
@@ -30,13 +31,35 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 **PROGRAM**
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming.
+```
 
-Developed by: RegisterNumber:
+module EXP10(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
+
+```
 
 */
 
 **RTL LOGIC FOR SISO Shift Register**
 
+![10l](https://github.com/user-attachments/assets/d34bb5aa-abea-413d-8269-cddc6393b260)
+
+
 **TIMING DIGRAMS FOR SISO Shift Register**
 
+![10w](https://github.com/user-attachments/assets/a5a958dc-4af6-4fb6-ac19-143c14a9ac8a)
+
 **RESULTS**
+
+Thus the SISO Shift Register using verilog is validated and the logic diagrams are designedd the truth table is  verified.
